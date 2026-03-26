@@ -1,11 +1,13 @@
 // all imports
 const express = require("express");
 const noteModels = require("./models/task.model");
+const cors =  require("cors")
 
 const app = express(); //instance of the express
 
 // all middleware
 app.use(express.json()); //to read the content
+app.use(cors())  //cross API
 
 // POST API
 
